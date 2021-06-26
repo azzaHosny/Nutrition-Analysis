@@ -11,20 +11,18 @@
 import UIKit
 
 class AddIngredientsCordinator {
-    weak var viewController: UINavigationController?
+    weak var navigationController: UINavigationController?
    
-   init(viewController: UINavigationController) {
-       self.viewController = viewController
+   init(navigationController: UINavigationController) {
+       self.navigationController = navigationController
    }
     func start() {
         let viewModel = AddIngredientsViewModel.init(cordinator: self)
         let vc = AddIngredientsViewController.init(viewModel: viewModel)
-        viewController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     func routToIngredientList(ingredientList: [AddIngredientsUIViewModel]) {
-       let ingredientListVC = AppStoryboard.main.getViewController(viewControllerClass: IngredientListViewController.self)
-        ingredientListVC.ingredinetList = ingredientList
-       viewController?.present(ingredientListVC, animated: true, completion: nil)
+        IngredientListCordinator.init(navigationController: navigationController!).start(ingredinetList: ingredientList)
    }
 }

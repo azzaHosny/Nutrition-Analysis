@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationController = UINavigationController()
         window.rootViewController = navigationController
         self.window = window
-        AddIngredientsCordinator.init(viewController: navigationController).start()
+        AddIngredientsCordinator.init(navigationController: navigationController).start()
         window.makeKeyAndVisible()
     }
 

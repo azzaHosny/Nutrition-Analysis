@@ -7,11 +7,11 @@
 
 import RxSwift
 class GetNutritionDataUseCase{
-    static func build(param: GetNutritionRequestModel) -> Observable<AddIngredientsViewModelStatus> {
+    static func build(param: GetNutritionRequestModel) -> Observable<AddIngredientsUIViewModel> {
         return NutritionRepoImpl.GetNutritionData(param: param).map({
            let nutitionObject = $0
             let viewModel = AddIngredientsUIViewModel(weight: "\(nutitionObject.totalWeight)", Quantity: "", Unit: "", Food: "", Calories: "\(nutitionObject.calories)")
-            return .sucess(viewModel)
+            return viewModel
         })
     }
     

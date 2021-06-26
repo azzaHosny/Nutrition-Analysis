@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5C33D68D26860E4000A4E8A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33D68C26860E4000A4E8A5 /* AppDelegate.swift */; };
 		5C33D68F26860E4000A4E8A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33D68E26860E4000A4E8A5 /* SceneDelegate.swift */; };
-		5C33D69426860E4000A4E8A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C33D69226860E4000A4E8A5 /* Main.storyboard */; };
 		5C33D69626860E4100A4E8A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C33D69526860E4100A4E8A5 /* Assets.xcassets */; };
 		5C33D69926860E4100A4E8A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C33D69726860E4100A4E8A5 /* LaunchScreen.storyboard */; };
 		5C33D6AA26861A0C00A4E8A5 /* AddIngredientsCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33D6A726861A0C00A4E8A5 /* AddIngredientsCordinator.swift */; };
@@ -31,6 +30,9 @@
 		5C90A23C2686814D00EA27C0 /* GetNutritionRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C90A21E26867A5B00EA27C0 /* GetNutritionRequestModel.swift */; };
 		5C90A23F268683D400EA27C0 /* NutrientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C90A23E268683D400EA27C0 /* NutrientData.swift */; };
 		5C90A24826868EF600EA27C0 /* AddIngredientsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C90A24726868EF600EA27C0 /* AddIngredientsViewController.xib */; };
+		5C93FF3726875A8100CABC09 /* IngredientListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C93FF3626875A8100CABC09 /* IngredientListViewController.xib */; };
+		5C93FF3A26875AA900CABC09 /* IngredientListCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93FF3926875AA900CABC09 /* IngredientListCordinator.swift */; };
+		5C93FF3D26875AB700CABC09 /* IngredientListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93FF3C26875AB700CABC09 /* IngredientListViewModel.swift */; };
 		CE4FF8A9508D9D0DC1FDE243 /* Pods_Nutrition_Analysis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6865EA67F13DA3A765831C28 /* Pods_Nutrition_Analysis.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +40,6 @@
 		5C33D68926860E4000A4E8A5 /* Nutrition Analysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nutrition Analysis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C33D68C26860E4000A4E8A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C33D68E26860E4000A4E8A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5C33D69326860E4000A4E8A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C33D69526860E4100A4E8A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C33D69826860E4100A4E8A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C33D69A26860E4100A4E8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +62,9 @@
 		5C90A23026867EC400EA27C0 /* GetNutientsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetNutientsResponse.swift; sourceTree = "<group>"; };
 		5C90A23E268683D400EA27C0 /* NutrientData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutrientData.swift; sourceTree = "<group>"; };
 		5C90A24726868EF600EA27C0 /* AddIngredientsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddIngredientsViewController.xib; sourceTree = "<group>"; };
+		5C93FF3626875A8100CABC09 /* IngredientListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientListViewController.xib; sourceTree = "<group>"; };
+		5C93FF3926875AA900CABC09 /* IngredientListCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientListCordinator.swift; sourceTree = "<group>"; };
+		5C93FF3C26875AB700CABC09 /* IngredientListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientListViewModel.swift; sourceTree = "<group>"; };
 		6865EA67F13DA3A765831C28 /* Pods_Nutrition_Analysis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nutrition_Analysis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB8EA6C7ACE508B3963A20D /* Pods-Nutrition Analysis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrition Analysis.release.xcconfig"; path = "Target Support Files/Pods-Nutrition Analysis/Pods-Nutrition Analysis.release.xcconfig"; sourceTree = "<group>"; };
 		FFB72BF18AFAB48FEE24B0DE /* Pods-Nutrition Analysis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrition Analysis.debug.xcconfig"; path = "Target Support Files/Pods-Nutrition Analysis/Pods-Nutrition Analysis.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,7 +185,6 @@
 		5C90A1F026861BB900EA27C0 /* storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				5C33D69226860E4000A4E8A5 /* Main.storyboard */,
 				5C33D69726860E4100A4E8A5 /* LaunchScreen.storyboard */,
 			);
 			path = storyboards;
@@ -201,6 +204,9 @@
 			isa = PBXGroup;
 			children = (
 				5C90A1F9268638A700EA27C0 /* IngredientListViewController.swift */,
+				5C93FF3626875A8100CABC09 /* IngredientListViewController.xib */,
+				5C93FF3926875AA900CABC09 /* IngredientListCordinator.swift */,
+				5C93FF3C26875AB700CABC09 /* IngredientListViewModel.swift */,
 			);
 			path = "ingredient list scene";
 			sourceTree = "<group>";
@@ -335,8 +341,8 @@
 				5C90A20026863A0800EA27C0 /* IngredientTableViewCell.xib in Resources */,
 				5C33D69926860E4100A4E8A5 /* LaunchScreen.storyboard in Resources */,
 				5C90A24826868EF600EA27C0 /* AddIngredientsViewController.xib in Resources */,
+				5C93FF3726875A8100CABC09 /* IngredientListViewController.xib in Resources */,
 				5C33D69626860E4100A4E8A5 /* Assets.xcassets in Resources */,
-				5C33D69426860E4000A4E8A5 /* Main.storyboard in Resources */,
 				5C90A2122686779C00EA27C0 /* urlsList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C90A20F268676DF00EA27C0 /* LoadingIndicator.swift in Sources */,
+				5C93FF3D26875AB700CABC09 /* IngredientListViewModel.swift in Sources */,
 				5C90A1F6268636E200EA27C0 /* AppStoryboard.swift in Sources */,
 				5C90A1FA268638A700EA27C0 /* IngredientListViewController.swift in Sources */,
 				5C90A2092686763C00EA27C0 /* Connectivity.swift in Sources */,
@@ -401,6 +408,7 @@
 				5C90A20C268676A800EA27C0 /* UIUtils.swift in Sources */,
 				5C33D6AA26861A0C00A4E8A5 /* AddIngredientsCordinator.swift in Sources */,
 				5C90A22726867C5C00EA27C0 /* GetNutritionDataUseCase.swift in Sources */,
+				5C93FF3A26875AA900CABC09 /* IngredientListCordinator.swift in Sources */,
 				5C33D6AB26861A0C00A4E8A5 /* AddIngredientsViewController.swift in Sources */,
 				5C90A23426867EC400EA27C0 /* GetNutientsResponse.swift in Sources */,
 				5C90A22B26867C7B00EA27C0 /* NutritionRepo.swift in Sources */,
@@ -414,14 +422,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5C33D69226860E4000A4E8A5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5C33D69326860E4000A4E8A5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5C33D69726860E4100A4E8A5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

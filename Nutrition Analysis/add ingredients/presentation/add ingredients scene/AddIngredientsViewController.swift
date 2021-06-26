@@ -13,20 +13,15 @@ import RxSwift
 
 class AddIngredientsViewController: UIViewController {
     
-    var uiArray: [AddIngredientsUIViewModel] = []
     let dispoasBag = DisposeBag()
     private var result: Disposable?
-    private var  viewModel: AddIngredientsViewModel
-
+    private let viewModel: AddIngredientsViewModel
+    
     // MARK: Outlets
-
-    @IBOutlet weak var ingedientTV: UITextView!
-    @IBAction func analyzeIsPressed(_ sender: Any) {
-        var ingredientsList = ingedientTV.text.components(separatedBy: "\n")
-        ingredientsList.removeAll(where: {$0.trimmingCharacters(in: .whitespacesAndNewlines) == ""})
-        if ingredientsList.count > 0 {
-            callGetNutrients()
-        }
+    
+    @IBOutlet weak var ingredientTextView: UITextView!
+    @IBAction func analyzeDidPressed(_ sender: Any) {
+        viewModel.getIngredientList(ingredientText: ingredientTextView.text)
     }
     
     init(viewModel: AddIngredientsViewModel) {
@@ -38,12 +33,6 @@ class AddIngredientsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    func  callGetNutrients() {
-        let params = GetNutritionRequestModel(app_id: "9a6d4460", app_key: "cd91b67f2ab0fa7b016f77b81f10219c", nutrition_type: "logging", ingr: "milk")
-        viewModel.getNuitrients(params: params)
-    }
-    
     // MARK: View lifecycle
     
     override func viewDidLoad() {
@@ -52,15 +41,17 @@ class AddIngredientsViewController: UIViewController {
     }
     
     func subscribeForSubjectOnViewModel() {
-        result = viewModel.behavioralSbj.subscribe { [weak self] event in
+        result = viewModel.behavioralSbj
+            .subscribe { [weak self] event in
             guard let self = self else { return }
             if let element = event.element {
                 self.configureUI(status: element)
             }
         }
-        result?.disposed(by: dispoasBag)
+        result?
+            .disposed(by: dispoasBag)
     }
-
+    
     func configureUI(status: AddIngredientsViewModelStatus) {
         switch status {
         case .fail:
@@ -73,8 +64,6 @@ class AddIngredientsViewController: UIViewController {
         }
         
     }
-    
-
 }
 
-   
+
