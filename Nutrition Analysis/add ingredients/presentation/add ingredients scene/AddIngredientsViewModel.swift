@@ -20,7 +20,7 @@ struct AddIngredientsUIViewModel {
 }
 
 enum AddIngredientsViewModelStatus {
-    case sucess(AddIngredientsUIViewModel)
+    case sucess([AddIngredientsUIViewModel])
     case fail
     case loading
 }
@@ -28,7 +28,7 @@ enum AddIngredientsViewModelStatus {
 class AddIngredientsViewModel {
     
     var cordinator: AddIngredientsCordinator
-
+    
     let disposBag = DisposeBag()
     let behavioralSbj = BehaviorSubject<AddIngredientsViewModelStatus>(value: .loading)
     
@@ -39,23 +39,30 @@ class AddIngredientsViewModel {
     func getIngredientList(ingredientText: String) {
         var ingredientsList = ingredientText.components(separatedBy: "\n")
         ingredientsList.removeAll(where: {$0.trimmingCharacters(in: .whitespacesAndNewlines) == ""})
-        if let first = ingredientsList.first {
-            getNuitrients(ingr: first)
+        if ingredientsList.count > 0 {
+            getNuitrients(ingr: ingredientsList)
         }
     }
     
-   private func getNuitrients(ingr: String) {
-      let params = GetNutritionRequestModel(app_id: "9a6d4460", app_key: "cd91b67f2ab0fa7b016f77b81f10219c", nutrition_type: "logging", ingr: ingr)
-        GetNutritionDataUseCase.build(param: params).subscribe( onNext: { [weak self] result in
-            guard let selfObjct = self else { return }
-            selfObjct.behavioralSbj.onNext(result)
-        }, onError: { [weak self] error in
-            guard let selfObjct = self else { return }
-            selfObjct.behavioralSbj.onNext(.fail)
-        }).disposed(by: disposBag)
+    private func getNuitrients(ingr: [String]) {
+        let ovbservables = ingr.map {
+            GetNutritionDataUseCase.build(param: GetNutritionRequestModel(app_id: "9a6d4460", app_key: "cd91b67f2ab0fa7b016f77b81f10219c", nutrition_type: "logging", ingr: $0))
+        }
+        Observable.zip(ovbservables).subscribe(
+            onNext: { [weak self] result in
+                guard let selfObjct = self else { return }
+                selfObjct.behavioralSbj.onNext(.sucess(result))
+            }
+            , onError: { [weak self] error in
+                guard let selfObjct = self else { return }
+                selfObjct.behavioralSbj.onNext(.fail)
+            }
+            , onCompleted: {
+            }, onDisposed: nil).disposed(by: disposBag)
     }
-    func passDatasourceToCordinator(datasource: AddIngredientsUIViewModel) {
-        cordinator.routToIngredientList(ingredientList: [datasource])
+    
+    func passDatasourceToCordinator(datasource: [AddIngredientsUIViewModel]) {
+        cordinator.routToIngredientList(ingredientList: datasource)
     }
 }
 
