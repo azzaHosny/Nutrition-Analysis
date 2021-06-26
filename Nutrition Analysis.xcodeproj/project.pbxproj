@@ -13,13 +13,12 @@
 		5C33D69926860E4100A4E8A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C33D69726860E4100A4E8A5 /* LaunchScreen.storyboard */; };
 		5C33D6AA26861A0C00A4E8A5 /* AddIngredientsCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33D6A726861A0C00A4E8A5 /* AddIngredientsCordinator.swift */; };
 		5C33D6AB26861A0C00A4E8A5 /* AddIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33D6A826861A0C00A4E8A5 /* AddIngredientsViewController.swift */; };
-		5C90A1F6268636E200EA27C0 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C90A1F5268636E200EA27C0 /* AppStoryboard.swift */; };
 		5C90A1FA268638A700EA27C0 /* IngredientListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C90A1F9268638A700EA27C0 /* IngredientListViewController.swift */; };
 		5C90A1FF26863A0800EA27C0 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C90A1FD26863A0800EA27C0 /* IngredientTableViewCell.swift */; };
 		5C90A20026863A0800EA27C0 /* IngredientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C90A1FE26863A0800EA27C0 /* IngredientTableViewCell.xib */; };
 		5C90A2062686762D00EA27C0 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C90A2052686762D00EA27C0 /* APICaller.swift */; };
 		5C90A2092686763C00EA27C0 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C90A2082686763C00EA27C0 /* Connectivity.swift */; };
-		5C90A20C268676A800EA27C0 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C90A20B268676A800EA27C0 /* UIUtils.swift */; };
+		5C90A20C268676A800EA27C0 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C90A20B268676A800EA27C0 /* Helpers.swift */; };
 		5C90A20F268676DF00EA27C0 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C90A20E268676DF00EA27C0 /* LoadingIndicator.swift */; };
 		5C90A2122686779C00EA27C0 /* urlsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C90A2112686779C00EA27C0 /* urlsList.plist */; };
 		5C90A219268679CE00EA27C0 /* AddIngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C90A216268679CE00EA27C0 /* AddIngredientsViewModel.swift */; };
@@ -33,6 +32,9 @@
 		5C93FF3726875A8100CABC09 /* IngredientListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C93FF3626875A8100CABC09 /* IngredientListViewController.xib */; };
 		5C93FF3A26875AA900CABC09 /* IngredientListCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93FF3926875AA900CABC09 /* IngredientListCordinator.swift */; };
 		5C93FF3D26875AB700CABC09 /* IngredientListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C93FF3C26875AB700CABC09 /* IngredientListViewModel.swift */; };
+		5CFF5EC62687AB83003259E5 /* NuitritionDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CFF5EC52687AB83003259E5 /* NuitritionDetailsViewController.xib */; };
+		5CFF5EC92687ABC5003259E5 /* NuitritionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFF5EC82687ABC5003259E5 /* NuitritionDetailsViewController.swift */; };
+		5CFF5ECC2687AC19003259E5 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFF5ECB2687AC19003259E5 /* AppConstants.swift */; };
 		CE4FF8A9508D9D0DC1FDE243 /* Pods_Nutrition_Analysis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6865EA67F13DA3A765831C28 /* Pods_Nutrition_Analysis.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,13 +47,12 @@
 		5C33D69A26860E4100A4E8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C33D6A726861A0C00A4E8A5 /* AddIngredientsCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientsCordinator.swift; sourceTree = "<group>"; };
 		5C33D6A826861A0C00A4E8A5 /* AddIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientsViewController.swift; sourceTree = "<group>"; };
-		5C90A1F5268636E200EA27C0 /* AppStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
 		5C90A1F9268638A700EA27C0 /* IngredientListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientListViewController.swift; sourceTree = "<group>"; };
 		5C90A1FD26863A0800EA27C0 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		5C90A1FE26863A0800EA27C0 /* IngredientTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientTableViewCell.xib; sourceTree = "<group>"; };
 		5C90A2052686762D00EA27C0 /* APICaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		5C90A2082686763C00EA27C0 /* Connectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
-		5C90A20B268676A800EA27C0 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
+		5C90A20B268676A800EA27C0 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		5C90A20E268676DF00EA27C0 /* LoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		5C90A2112686779C00EA27C0 /* urlsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = urlsList.plist; sourceTree = "<group>"; };
 		5C90A216268679CE00EA27C0 /* AddIngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientsViewModel.swift; sourceTree = "<group>"; };
@@ -65,6 +66,9 @@
 		5C93FF3626875A8100CABC09 /* IngredientListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientListViewController.xib; sourceTree = "<group>"; };
 		5C93FF3926875AA900CABC09 /* IngredientListCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientListCordinator.swift; sourceTree = "<group>"; };
 		5C93FF3C26875AB700CABC09 /* IngredientListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientListViewModel.swift; sourceTree = "<group>"; };
+		5CFF5EC52687AB83003259E5 /* NuitritionDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NuitritionDetailsViewController.xib; sourceTree = "<group>"; };
+		5CFF5EC82687ABC5003259E5 /* NuitritionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuitritionDetailsViewController.swift; sourceTree = "<group>"; };
+		5CFF5ECB2687AC19003259E5 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		6865EA67F13DA3A765831C28 /* Pods_Nutrition_Analysis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nutrition_Analysis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB8EA6C7ACE508B3963A20D /* Pods-Nutrition Analysis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrition Analysis.release.xcconfig"; path = "Target Support Files/Pods-Nutrition Analysis/Pods-Nutrition Analysis.release.xcconfig"; sourceTree = "<group>"; };
 		FFB72BF18AFAB48FEE24B0DE /* Pods-Nutrition Analysis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrition Analysis.debug.xcconfig"; path = "Target Support Files/Pods-Nutrition Analysis/Pods-Nutrition Analysis.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,29 +117,30 @@
 			children = (
 				5C90A2032686760F00EA27C0 /* network */,
 				5C90A1F4268636BE00EA27C0 /* helper  */,
-				5C90A1F026861BB900EA27C0 /* storyboards */,
 				5C90A1EE26861B7B00EA27C0 /* app delegate & scene */,
-				5C33D6A12686197600A4E8A5 /* add ingredients */,
+				5C33D6A12686197600A4E8A5 /* ingredient module */,
 				5C33D69526860E4100A4E8A5 /* Assets.xcassets */,
+				5C33D69726860E4100A4E8A5 /* LaunchScreen.storyboard */,
 				5C90A2112686779C00EA27C0 /* urlsList.plist */,
 				5C33D69A26860E4100A4E8A5 /* Info.plist */,
 			);
 			path = "Nutrition Analysis";
 			sourceTree = "<group>";
 		};
-		5C33D6A12686197600A4E8A5 /* add ingredients */ = {
+		5C33D6A12686197600A4E8A5 /* ingredient module */ = {
 			isa = PBXGroup;
 			children = (
 				5C33D6A4268619C200A4E8A5 /* domain */,
 				5C33D6A3268619BC00A4E8A5 /* data */,
 				5C33D6A2268619AE00A4E8A5 /* presentation */,
 			);
-			path = "add ingredients";
+			path = "ingredient module";
 			sourceTree = "<group>";
 		};
 		5C33D6A2268619AE00A4E8A5 /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5CFF5EC42687AB49003259E5 /* nutrition details scene */,
 				5C90A1FC268639DE00EA27C0 /* tableview cells */,
 				5C90A1F82686387900EA27C0 /* ingredient list scene */,
 				5C33D6A5268619D400A4E8A5 /* add ingredients scene */,
@@ -182,20 +187,12 @@
 			path = "app delegate & scene";
 			sourceTree = "<group>";
 		};
-		5C90A1F026861BB900EA27C0 /* storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				5C33D69726860E4100A4E8A5 /* LaunchScreen.storyboard */,
-			);
-			path = storyboards;
-			sourceTree = "<group>";
-		};
 		5C90A1F4268636BE00EA27C0 /* helper  */ = {
 			isa = PBXGroup;
 			children = (
 				5C90A20E268676DF00EA27C0 /* LoadingIndicator.swift */,
-				5C90A1F5268636E200EA27C0 /* AppStoryboard.swift */,
-				5C90A20B268676A800EA27C0 /* UIUtils.swift */,
+				5C90A20B268676A800EA27C0 /* Helpers.swift */,
+				5CFF5ECB2687AC19003259E5 /* AppConstants.swift */,
 			);
 			path = "helper ";
 			sourceTree = "<group>";
@@ -268,6 +265,15 @@
 				5C90A22D26867CD200EA27C0 /* NutritionRepoImpl.swift */,
 			);
 			path = "repo impl";
+			sourceTree = "<group>";
+		};
+		5CFF5EC42687AB49003259E5 /* nutrition details scene */ = {
+			isa = PBXGroup;
+			children = (
+				5CFF5EC52687AB83003259E5 /* NuitritionDetailsViewController.xib */,
+				5CFF5EC82687ABC5003259E5 /* NuitritionDetailsViewController.swift */,
+			);
+			path = "nutrition details scene";
 			sourceTree = "<group>";
 		};
 		B7F121BB747B83D06F2903EC /* Pods */ = {
@@ -343,6 +349,7 @@
 				5C90A24826868EF600EA27C0 /* AddIngredientsViewController.xib in Resources */,
 				5C93FF3726875A8100CABC09 /* IngredientListViewController.xib in Resources */,
 				5C33D69626860E4100A4E8A5 /* Assets.xcassets in Resources */,
+				5CFF5EC62687AB83003259E5 /* NuitritionDetailsViewController.xib in Resources */,
 				5C90A2122686779C00EA27C0 /* urlsList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,14 +405,15 @@
 			files = (
 				5C90A20F268676DF00EA27C0 /* LoadingIndicator.swift in Sources */,
 				5C93FF3D26875AB700CABC09 /* IngredientListViewModel.swift in Sources */,
-				5C90A1F6268636E200EA27C0 /* AppStoryboard.swift in Sources */,
 				5C90A1FA268638A700EA27C0 /* IngredientListViewController.swift in Sources */,
 				5C90A2092686763C00EA27C0 /* Connectivity.swift in Sources */,
+				5CFF5ECC2687AC19003259E5 /* AppConstants.swift in Sources */,
 				5C90A1FF26863A0800EA27C0 /* IngredientTableViewCell.swift in Sources */,
 				5C90A23F268683D400EA27C0 /* NutrientData.swift in Sources */,
+				5CFF5EC92687ABC5003259E5 /* NuitritionDetailsViewController.swift in Sources */,
 				5C33D68D26860E4000A4E8A5 /* AppDelegate.swift in Sources */,
 				5C90A22E26867CD200EA27C0 /* NutritionRepoImpl.swift in Sources */,
-				5C90A20C268676A800EA27C0 /* UIUtils.swift in Sources */,
+				5C90A20C268676A800EA27C0 /* Helpers.swift in Sources */,
 				5C33D6AA26861A0C00A4E8A5 /* AddIngredientsCordinator.swift in Sources */,
 				5C90A22726867C5C00EA27C0 /* GetNutritionDataUseCase.swift in Sources */,
 				5C93FF3A26875AA900CABC09 /* IngredientListCordinator.swift in Sources */,

@@ -18,9 +18,10 @@ class AddIngredientsViewController: UIViewController {
     private let viewModel: AddIngredientsViewModel
     
     // MARK: Outlets
-    
     @IBOutlet weak var ingredientTextView: UITextView!
+    
     @IBAction func analyzeDidPressed(_ sender: Any) {
+        self.showLoadinIndicator(viewController: self)
         viewModel.getIngredientList(ingredientText: ingredientTextView.text)
     }
     
@@ -55,9 +56,9 @@ class AddIngredientsViewController: UIViewController {
     func configureUI(status: AddIngredientsViewModelStatus) {
         switch status {
         case .fail:
-            UIUtils.removeLoadingIndicator(viewController: self)
+            self.removeLoadingIndicator(viewController: self)
         case .sucess(let data):
-            UIUtils.removeLoadingIndicator(viewController: self)
+            self.removeLoadingIndicator(viewController: self)
             viewModel.passDatasourceToCordinator(datasource: data)
         case .loading:
             break

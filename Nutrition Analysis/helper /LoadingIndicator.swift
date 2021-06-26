@@ -1,6 +1,5 @@
 //
 //  LoadingIndicator.swift
-//  OrderOnline
 //
 //  Created by azah on 6/1/21.
 //
@@ -35,7 +34,7 @@ class LoadingIndicator: UIVisualEffectView {
   }
 
   func setup() {
-    activityIndictor.assignColor(#colorLiteral(red: 0.9880279899, green: 0.4323290822, blue: 0.09737553447, alpha: 1))
+    activityIndictor.assignColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
     contentView.addSubview(vibrancyView)
     contentView.addSubview(activityIndictor)
     if text != "" {
@@ -61,14 +60,6 @@ class LoadingIndicator: UIVisualEffectView {
 
       let activityIndicatorSize: CGFloat = 40
 
-//
-//     activityIndictor.frame = CGRect(x: (contentView.frame.width / 2) - 50,
-//                                      y: height / 2 - activityIndicatorSize / 2,
-//                                      width: activityIndicatorSize,
-//                                      height: activityIndicatorSize)
-        
-        
-        
         let padding: CGFloat = (contentView.frame.width - 40) / 2
         
         activityIndictor.anchor(top: contentView.topAnchor,
@@ -82,15 +73,6 @@ class LoadingIndicator: UIVisualEffectView {
 
       layer.cornerRadius = 8.0
       layer.masksToBounds = true
-//      label.text = text
-//      label.textAlignment = NSTextAlignment.center
-//      label.frame = CGRect(x: activityIndicatorSize + 5,
-//                           y: 0,
-//                           width: width - activityIndicatorSize - 15,
-//                           height: height)
-//      label.textColor = UIColor.gray
-//      label.font = UIFont.boldSystemFont(ofSize: 16)
-//    }
     }
   }
     
