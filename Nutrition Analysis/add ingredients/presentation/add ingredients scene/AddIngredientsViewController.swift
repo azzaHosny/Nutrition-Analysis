@@ -71,6 +71,7 @@ class AddIngredientsViewController: UIViewController {
         case .loading:
             break
         }
+        
     }
     
 
