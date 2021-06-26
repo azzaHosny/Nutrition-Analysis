@@ -40,8 +40,7 @@ class AddIngredientsViewController: UIViewController {
     
     
     func  callGetNutrients() {
-        let params = GetNutritionRequestModel(app_id: "9a6d4460", app_key: "cd91b67f2ab0fa7b016f77b81f10219c", nutrition_type: "logging", ingr: "milk")
-        viewModel.getNuitrients(params: params)
+        viewModel.getNuitrients(ingr: "milk")
     }
     
     // MARK: View lifecycle

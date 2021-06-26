@@ -36,7 +36,8 @@ class AddIngredientsViewModel {
         self.cordinator = cordinator
     }
     
-    func getNuitrients(params: GetNutritionRequestModel) {
+    func getNuitrients(ingr: String) {
+      let params = GetNutritionRequestModel(app_id: "9a6d4460", app_key: "cd91b67f2ab0fa7b016f77b81f10219c", nutrition_type: "logging", ingr: ingr)
         GetNutritionDataUseCase.build(param: params).subscribe( onNext: { [weak self] result in
             guard let selfObjct = self else { return }
             selfObjct.behavioralSbj.onNext(result)
