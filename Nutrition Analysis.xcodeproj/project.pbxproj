@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5C33D68D26860E4000A4E8A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33D68C26860E4000A4E8A5 /* AppDelegate.swift */; };
 		5C33D68F26860E4000A4E8A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33D68E26860E4000A4E8A5 /* SceneDelegate.swift */; };
-		5C33D69426860E4000A4E8A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C33D69226860E4000A4E8A5 /* Main.storyboard */; };
 		5C33D69626860E4100A4E8A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C33D69526860E4100A4E8A5 /* Assets.xcassets */; };
 		5C33D69926860E4100A4E8A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C33D69726860E4100A4E8A5 /* LaunchScreen.storyboard */; };
 		5C33D6AA26861A0C00A4E8A5 /* AddIngredientsCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33D6A726861A0C00A4E8A5 /* AddIngredientsCordinator.swift */; };
@@ -41,7 +40,6 @@
 		5C33D68926860E4000A4E8A5 /* Nutrition Analysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nutrition Analysis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C33D68C26860E4000A4E8A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C33D68E26860E4000A4E8A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5C33D69326860E4000A4E8A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C33D69526860E4100A4E8A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C33D69826860E4100A4E8A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C33D69A26860E4100A4E8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 		5C90A1F026861BB900EA27C0 /* storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				5C33D69226860E4000A4E8A5 /* Main.storyboard */,
 				5C33D69726860E4100A4E8A5 /* LaunchScreen.storyboard */,
 			);
 			path = storyboards;
@@ -346,7 +343,6 @@
 				5C90A24826868EF600EA27C0 /* AddIngredientsViewController.xib in Resources */,
 				5C93FF3726875A8100CABC09 /* IngredientListViewController.xib in Resources */,
 				5C33D69626860E4100A4E8A5 /* Assets.xcassets in Resources */,
-				5C33D69426860E4000A4E8A5 /* Main.storyboard in Resources */,
 				5C90A2122686779C00EA27C0 /* urlsList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,14 +422,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5C33D69226860E4000A4E8A5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5C33D69326860E4000A4E8A5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5C33D69726860E4100A4E8A5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

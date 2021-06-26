@@ -36,7 +36,15 @@ class AddIngredientsViewModel {
         self.cordinator = cordinator
     }
     
-    func getNuitrients(ingr: String) {
+    func getIngredientList(ingredientText: String) {
+        var ingredientsList = ingredientText.components(separatedBy: "\n")
+        ingredientsList.removeAll(where: {$0.trimmingCharacters(in: .whitespacesAndNewlines) == ""})
+        if let first = ingredientsList.first {
+            getNuitrients(ingr: first)
+        }
+    }
+    
+   private func getNuitrients(ingr: String) {
       let params = GetNutritionRequestModel(app_id: "9a6d4460", app_key: "cd91b67f2ab0fa7b016f77b81f10219c", nutrition_type: "logging", ingr: ingr)
         GetNutritionDataUseCase.build(param: params).subscribe( onNext: { [weak self] result in
             guard let selfObjct = self else { return }
