@@ -6,11 +6,16 @@
 //
 
 import RxSwift
-class GetNutritionDataUseCase{
-    static func build(param: GetNutritionRequestModel) -> Observable<AddIngredientsUIViewModel> {
-        return NutritionRepoImpl.GetNutritionData(param: param).map({
+
+protocol GetNutritionDataUseCaseProtocol {
+    func build(param: GetNutritionRequestModel, repo: NutritionRepo) -> Observable<AddIngredientsUIViewModel>
+}
+
+class GetNutritionDataUseCase: GetNutritionDataUseCaseProtocol {
+     func build(param: GetNutritionRequestModel, repo: NutritionRepo) -> Observable<AddIngredientsUIViewModel> {
+        return repo.GetNutritionData(param: param).map({
            let nutitionObject = $0
-            let viewModel = AddIngredientsUIViewModel(weight: "\(nutitionObject.totalWeight)", Quantity: "", Unit: "", Food: "", Calories: "\(nutitionObject.calories)")
+           let viewModel = AddIngredientsUIViewModel(weight: "\(nutitionObject.totalWeight)", Quantity: "", Unit: "", Food: "", Calories: "\(nutitionObject.calories)")
             return viewModel
         })
     }

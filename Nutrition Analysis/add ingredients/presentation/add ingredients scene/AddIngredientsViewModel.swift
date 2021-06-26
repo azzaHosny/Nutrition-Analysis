@@ -26,14 +26,16 @@ enum AddIngredientsViewModelStatus {
 }
 
 class AddIngredientsViewModel {
-    
+    let repoImpl: NutritionRepo
     var cordinator: AddIngredientsCordinator
-    
+    let useCaeProtocol: GetNutritionDataUseCaseProtocol
     let disposBag = DisposeBag()
     let behavioralSbj = BehaviorSubject<AddIngredientsViewModelStatus>(value: .loading)
     
-    init(cordinator: AddIngredientsCordinator){
+    init(cordinator: AddIngredientsCordinator, useCaeProtocol: GetNutritionDataUseCaseProtocol, repoImpl: NutritionRepo){
+        self.useCaeProtocol = useCaeProtocol
         self.cordinator = cordinator
+        self.repoImpl = repoImpl
     }
     
     func getIngredientList(ingredientText: String) {
@@ -46,7 +48,7 @@ class AddIngredientsViewModel {
     
     private func getNuitrients(ingr: [String]) {
         let ovbservables = ingr.map {
-            GetNutritionDataUseCase.build(param: GetNutritionRequestModel(app_id: "9a6d4460", app_key: "cd91b67f2ab0fa7b016f77b81f10219c", nutrition_type: "logging", ingr: $0))
+            useCaeProtocol.build(param: GetNutritionRequestModel(app_id: "9a6d4460", app_key: "cd91b67f2ab0fa7b016f77b81f10219c", nutrition_type: "logging", ingr: $0), repo: repoImpl)
         }
         Observable.zip(ovbservables).subscribe(
             onNext: { [weak self] result in

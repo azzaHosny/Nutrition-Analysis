@@ -15,9 +15,9 @@ class AddIngredientsCordinator {
    
    init(navigationController: UINavigationController) {
        self.navigationController = navigationController
-   }
+    }
     func start() {
-        let viewModel = AddIngredientsViewModel.init(cordinator: self)
+        let viewModel = AddIngredientsViewModel.init(cordinator: self, useCaeProtocol: GetNutritionDataUseCase(), repoImpl: NutritionRepoImpl())
         let vc = AddIngredientsViewController.init(viewModel: viewModel)
         navigationController?.pushViewController(vc, animated: true)
     }

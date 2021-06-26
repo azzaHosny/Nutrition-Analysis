@@ -8,7 +8,7 @@
 import RxSwift
 
 class NutritionRepoImpl: NutritionRepo {
-    static func GetNutritionData(param: GetNutritionRequestModel) -> Observable<GetNutientsResponse> {
+     func GetNutritionData(param: GetNutritionRequestModel) -> Observable<GetNutientsResponse> {
         let url = GeneralUtils.readPropertyList(urlType: "getNuitrationAnalyse")
         let params: [String: Any] = ["app_id": param.app_id, "app_key": param.app_key, "nutrition-type": param.nutrition_type, "ingr": param.ingr]
         return APICaller.makeRequest(url: url, method: .get, paramters: params, header: [:])

@@ -7,6 +7,6 @@
 
 import RxSwift
 protocol NutritionRepo {
-    static func GetNutritionData(param: GetNutritionRequestModel) -> Observable<GetNutientsResponse>
+     func GetNutritionData(param: GetNutritionRequestModel) -> Observable<GetNutientsResponse>
     
 }
