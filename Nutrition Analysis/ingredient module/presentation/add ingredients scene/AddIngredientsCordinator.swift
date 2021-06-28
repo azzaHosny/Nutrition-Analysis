@@ -12,12 +12,11 @@ import UIKit
 
 class AddIngredientsCordinator {
     weak var navigationController: UINavigationController?
-   
-   init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController) {
        self.navigationController = navigationController
-   }
+    }
     func start() {
-        let viewModel = AddIngredientsViewModel.init(cordinator: self)
+        let viewModel = AddIngredientsViewModel.init(cordinator: self, getNutritionDataUseCase: GetNutritionDataUseCase(), nutritionRepo: NutritionRepoImpl())
         let vc = AddIngredientsViewController.init(viewModel: viewModel)
         navigationController?.pushViewController(vc, animated: true)
     }

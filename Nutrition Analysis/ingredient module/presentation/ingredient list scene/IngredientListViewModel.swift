@@ -2,7 +2,7 @@
 //  IngredientListViewModel.swift
 //  Nutrition Analysis
 //
-//  Created by SmartPan on 6/26/21.
+//  Created by azah on 6/26/21.
 //
 
 import Foundation

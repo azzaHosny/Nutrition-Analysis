@@ -6,38 +6,8 @@
 //
 
 import UIKit
-class UIUtils{
-    class func showLoadinIndicator(viewController: UIViewController) {
-        let indicator = LoadingIndicator(text: "")
-        if viewController.view.subviews.first(where: {$0 is UIVisualEffectView}) == nil {
-            addParentView(viewController: viewController)
-            viewController.view.addSubview(indicator)
-        }
-    }
 
-    class func removeLoadingIndicator(viewController: UIViewController) {
-        if let indicator  = viewController.view.subviews.first(where: {$0 is UIVisualEffectView}) , let blockView = viewController.view.subviews.first(where: {$0.tag == 2}){
-            blockView.removeFromSuperview()
-            indicator.removeFromSuperview()
-        } else {
-            print("fail to delete")
-        }
-    }
-    class func addParentView(viewController: UIViewController) {
-        let customView = UIView()
-        customView.tag = 2
-        viewController.view.addSubview(customView)
-        customView.anchor(top: viewController.view.topAnchor, leading: viewController.view.leadingAnchor,
-                        bottom: viewController.view.bottomAnchor, trailing: viewController.view.trailingAnchor,
-                         padding: .init(top: 0, left: 0, bottom: 0, right: 0),
-                         size: customView.frame.size)
-        customView.backgroundColor = .clear
-        customView.isUserInteractionEnabled = true
-    }
-    
- 
-}
-class GeneralUtils {
+class Helpers {
     public class func readPropertyList(urlType: String) -> String {
         
         var format = PropertyListSerialization.PropertyListFormat.xml
@@ -95,4 +65,33 @@ extension UIView {
             heightAnchor.constraint(equalToConstant: size.height).isActive = true
         }
     }
+}
+extension UIViewController {
+    func showLoadinIndicator(viewController: UIViewController) {
+        let indicator = LoadingIndicator(text: "")
+        if viewController.view.subviews.first(where: {$0 is UIVisualEffectView}) == nil {
+            addParentView(viewController: viewController)
+            viewController.view.addSubview(indicator)
+        }
+    }
+    func removeLoadingIndicator(viewController: UIViewController) {
+        if let indicator  = viewController.view.subviews.first(where: {$0 is UIVisualEffectView}) , let blockView = viewController.view.subviews.first(where: {$0.tag == 2}){
+            blockView.removeFromSuperview()
+            indicator.removeFromSuperview()
+        } else {
+            print("fail to delete")
+        }
+    }
+    func addParentView(viewController: UIViewController) {
+        let customView = UIView()
+        customView.tag = 2
+        viewController.view.addSubview(customView)
+        customView.anchor(top: viewController.view.topAnchor, leading: viewController.view.leadingAnchor,
+                        bottom: viewController.view.bottomAnchor, trailing: viewController.view.trailingAnchor,
+                         padding: .init(top: 0, left: 0, bottom: 0, right: 0),
+                         size: customView.frame.size)
+        customView.backgroundColor = .clear
+        customView.isUserInteractionEnabled = true
+    }
+    
 }

@@ -2,14 +2,14 @@
 //  IngredientListCordinator.swift
 //  Nutrition Analysis
 //
-//  Created by SmartPan on 6/26/21.
+//  Created by azah on 6/26/21.
 //
 
 import UIKit
 
 class IngredientListCordinator {
-    let navigationController: UINavigationController
     
+    let navigationController: UINavigationController
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
@@ -17,7 +17,6 @@ class IngredientListCordinator {
     func start(ingredinetList: [AddIngredientsUIViewModel]) {
         let viewModel = IngredientListViewModel(cordinator: self, datasource: ingredinetList)
         let viewController = IngredientListViewController.init(viewModel: viewModel)
-//        viewController.ingredinetList = ingredinetList
         navigationController.pushViewController(viewController, animated: true)
     }
     
