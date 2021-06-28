@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddIngredientsViewController" customModule="Nutrition_Analysis" customModuleProvider="target">
             <connections>
-                <outlet property="ingedientTV" destination="mkm-nV-nXA" id="xFG-LP-Caj"/>
+                <outlet property="ingredientTextView" destination="mkm-nV-nXA" id="aj2-yO-6T9"/>
                 <outlet property="view" destination="Mw3-vx-ipm" id="Teh-z2-358"/>
             </connections>
         </placeholder>
@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Yyq-YK-q25">
-                    <rect key="frame" x="20" y="114" width="374" height="363"/>
+                    <rect key="frame" x="20" y="94" width="374" height="678"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Ingredient" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUr-1E-Syi">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -33,8 +33,8 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="ice 50 4" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mkm-nV-nXA">
-                            <rect key="frame" x="0.0" y="45" width="374" height="318"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <rect key="frame" x="0.0" y="45" width="374" height="633"/>
+                            <color key="backgroundColor" red="0.9607035518" green="0.96083790059999996" blue="0.96066111330000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" priority="250" constant="200" id="jmR-VY-D34"/>
                             </constraints>
@@ -54,17 +54,17 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="analyzeIsPressed:" destination="-1" eventType="touchUpInside" id="Beo-fj-squ"/>
+                        <action selector="analyzeDidPressed:" destination="-1" eventType="touchUpInside" id="seg-dX-u06"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="zWm-YE-GGH"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="SoV-VF-uE5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Yyq-YK-q25" secondAttribute="bottom" constant="20" id="28A-ue-e4x"/>
+                <constraint firstItem="SoV-VF-uE5" firstAttribute="top" secondItem="Yyq-YK-q25" secondAttribute="bottom" constant="20" id="28A-ue-e4x"/>
                 <constraint firstItem="SoV-VF-uE5" firstAttribute="width" secondItem="Mw3-vx-ipm" secondAttribute="width" multiplier="0.5" id="32U-7Q-PSs"/>
                 <constraint firstItem="zWm-YE-GGH" firstAttribute="trailing" secondItem="Yyq-YK-q25" secondAttribute="trailing" constant="20" id="C3P-91-Vwj"/>
-                <constraint firstItem="Yyq-YK-q25" firstAttribute="top" secondItem="zWm-YE-GGH" secondAttribute="top" constant="70" id="DaQ-1B-rtW"/>
+                <constraint firstItem="Yyq-YK-q25" firstAttribute="top" secondItem="zWm-YE-GGH" secondAttribute="top" constant="50" id="DaQ-1B-rtW"/>
                 <constraint firstItem="SoV-VF-uE5" firstAttribute="centerX" secondItem="Mw3-vx-ipm" secondAttribute="centerX" id="GcY-Yp-1PZ"/>
                 <constraint firstItem="Yyq-YK-q25" firstAttribute="leading" secondItem="zWm-YE-GGH" secondAttribute="leading" constant="20" id="YaG-KR-VLM"/>
                 <constraint firstItem="zWm-YE-GGH" firstAttribute="bottom" secondItem="SoV-VF-uE5" secondAttribute="bottom" constant="20" id="qTV-fY-ED1"/>
@@ -78,9 +78,6 @@
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
